@@ -31,7 +31,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_21_093731) do
     t.text "back_picture"
     t.text "description"
     t.string "location"
-    t.integer "recapture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
