@@ -3,15 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>BeFake. - Votre dose quotidienne de fake</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="container text-white">
+<body class="container fs-5">
   <p class="text-center fw-bold fs-3 py-4">BeFake.</p>
   <div class="text-white">
     <p style="color: green"><%= notice %></p>
 
   <h1>Accède à tes posts BeFake !</h1>
-
+  <div class="container p-0">
+  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
+    <!-- Carte 1 -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          Card 1
+        </div>
+      </div>
+    </div>
+    <!-- Carte 2 -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          Card 2
+        </div>
+      </div>
+    </div>
+    <!-- Carte 3 -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          Card 3
+        </div>
+      </div>
+    </div>
+    <!-- Carte 4 -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          Card 4
+        </div>
+      </div>
+    </div>
+    <!-- Carte 5 -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          Card 5
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <div id="befakeposts">
     <% @befakeposts.each do |befakepost| %>
       <%= render befakepost %>
