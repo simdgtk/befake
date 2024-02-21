@@ -1,0 +1,47 @@
+<%= form_with(model: befakepost) do |form| %>
+  <% if befakepost.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(befakepost.errors.count, "error") %> prohibited this befakepost from being saved:</h2>
+
+      <ul>
+        <% befakepost.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :username, style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label :profile_picture, style: "display: block" %>
+    <%= form.text_area :profile_picture %>
+  </div>
+
+  <div>
+    <%= form.label :front_picture, style: "display: block" %>
+    <%= form.text_area :front_picture %>
+  </div>
+
+  <div>
+    <%= form.label :back_picture, style: "display: block" %>
+    <%= form.text_area :back_picture %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

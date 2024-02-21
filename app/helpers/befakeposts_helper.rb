@@ -1,0 +1,2 @@
+module BefakepostsHelper
+end

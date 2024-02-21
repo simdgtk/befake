@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @befakepost %>
+
+<div>
+  <%= link_to "Edit this befakepost", edit_befakepost_path(@befakepost) %> |
+  <%= link_to "Back to befakeposts", befakeposts_path %>
+
+  <%= button_to "Destroy this befakepost", @befakepost, method: :delete %>
+</div>
