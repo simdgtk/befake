@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BeFake. - Votre dose quotidienne de fake</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body class="container fs-5">
-  <p class="text-center fw-bold fs-3 py-4">BeFake.</p>
-  <div class="text-white">
-    <p style="color: green"><%= notice %></p>
+<div class="container fs-5">
+<p class="text-center fw-bold fs-3 py-4">BeFake.</p>
+<div class="text-white">
+  <p style="color: green"><%= notice %></p>
 <div class="container p-0">
 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
 
 <% @befakeposts.each do |befakepost| %>
   <div class="col">
-    <a class="card text-decoration-none " href="#" style="overflow: hidden; background-repeat: no-repeat; background-position: center; background-size: cover;
+    <a class="card text-decoration-none " href="<%= new_befakepost_path %>" style="overflow: hidden; background-repeat: no-repeat; background-position: center; background-size: cover;
     background: no-repeat linear-gradient( 180deg, rgba(5, 5, 5, 0.00) 70%, rgba(25, 25, 25, 0.1) 78%, rgba(37, 37, 37, 1) 100% ), 100% / 100% url('<%= befakepost.back_picture %>')
     ">
       <div class="card-body">
@@ -26,7 +15,7 @@
           <div class="sm-card" style="background-image: url('<%= befakepost.front_picture %>')"></div>
           <div class="texts d-flex g-2 flex-column">
             <span class="fw-bold text-white username"><%= befakepost.username %></span>
-            <span class="date fw-bold"><%= l(befakepost.created_at, format: '%H:%M:%S') %></span>
+            <span class="date fw-bold"><%= (befakepost.created_at + 1.hour).strftime("%H:%M:%S") %></span>
           </div>
         </div>
       </div>
@@ -36,16 +25,11 @@
 </div>
 </div>
 <!-- Liens -->
-<div id="befakeposts">
-    <% @befakeposts.each do |befakepost| %>
-      <%= render befakepost %>
-      <p class="text-white">
-        <%= link_to "Show this befakepost", befakepost %>
-      </p>
-    <% end %>
-  </div>
 
   <%= link_to "New befakepost", new_befakepost_path %>
   </div>
-</body>
-</html>
+</div>
+
+<div class="new-befakepost w-100">
+  <img src="app/assets/images/photo.svg" alt="capturer">
+</div>
