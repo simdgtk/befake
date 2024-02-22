@@ -4,14 +4,23 @@
 
 
   <body class="container fs-5">
+    <div class="d-flex justify-content-between">
+     <%= link_to "Back to befakeposts", befakeposts_path %>
   <p class="text-center fw-bold fs-3 py-4"><%= @befakepost.username %></p>
-  
+ 
+  <button type="button" class="center btn btn-primary">Primary</button>
+  </div>
+  <p class="date text-center"><%= l(@befakepost.created_at, format: '%H:%M:%S') %></p>
   <div class="text-white">
+  
     <p style="color: green"><%= notice %></p>
 
 
+
+<br><br><br><br><br><br>
+
   <div class="container p-0">
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
+
     <!-- Carte 1 -->
     <div class="col">
   <a class="card text-decoration-none " href="#" style="overflow: hidden; background-repeat: no-repeat; background-position: center; background-size: cover;
@@ -31,6 +40,7 @@
 <button class="btn btn-secondary" ><%= @befakepost.location %></button>
 
   <%= link_to "Edit this befakepost", edit_befakepost_path(@befakepost) %> |
-  <%= link_to "Back to befakeposts", befakeposts_path %>
+  
   <%= button_to "Destroy this befakepost", @befakepost, method: :delete %>
+
 </div>
