@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,68 +13,32 @@
   <p class="text-center fw-bold fs-3 py-4">BeFake.</p>
   <div class="text-white">
     <p style="color: green"><%= notice %></p>
+<div class="container p-0">
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
 
-  <h1>Accède à tes posts BeFake !</h1>
-  <div class="container p-0">
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
-    <!-- Carte 1 -->
-    <div class="col">
-  <a class="card text-decoration-none" href="#" style="overflow: hidden; background-repeat: no-repeat; background-position: center; background-size: cover;
-  background: no-repeat linear-gradient( 180deg, rgba(5, 5, 5, 0.00) 70%, rgba(25, 25, 25, 0.1) 78%, rgba(37, 37, 37, 1) 100% ), 100% / 100% url('https://odysseum.eduscol.education.fr/sites/default/files/2024-02/MIN_Education_Nationale_et_Jeunesse_RVB.png')
-  ">
-    <div class="card-body">
-      <div class="d-flex flex-column justify-content-between h-100">
-        <div class="sm-card"></div>
-        <div class="texts d-flex g-2 flex-column">
-          <span class="fw-bold text-white username">Username</span>
-          <span class="date fw-bold">Post date</span>
+<% @befakeposts.each do |befakepost| %>
+  <div class="col">
+    <a class="card text-decoration-none " href="#" style="overflow: hidden; background-repeat: no-repeat; background-position: center; background-size: cover;
+    background: no-repeat linear-gradient( 180deg, rgba(5, 5, 5, 0.00) 70%, rgba(25, 25, 25, 0.1) 78%, rgba(37, 37, 37, 1) 100% ), 100% / 100% url('<%= befakepost.back_picture %>')
+    ">
+      <div class="card-body">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="sm-card" style="background-image: url('<%= befakepost.front_picture %>')"></div>
+          <div class="texts d-flex g-2 flex-column">
+            <span class="fw-bold text-white username"><%= befakepost.username %></span>
+            <span class="date fw-bold"><%= l(befakepost.created_at, format: '%H:%M:%S') %></span>
+          </div>
         </div>
       </div>
-    </div>
-  </a>
-</div>
-
-    <!-- Carte 2 -->
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          Card 2
-        </div>
-      </div>
-    </div>
-    <!-- Carte 3 -->
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          Card 3
-        </div>
-      </div>
-    </div>
-    <!-- Carte 4 -->
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          Card 4
-        </div>
-      </div>
-    </div>
-    <!-- Carte 5 -->
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          Card 5
-        </div>
-      </div>
-    </div>
+    </a>
   </div>
+  <% end %>
 </div>
-  <div id="befakeposts">
+</div>
+<!-- Liens -->
+<div id="befakeposts">
     <% @befakeposts.each do |befakepost| %>
       <%= render befakepost %>
-      <div class="img-container" style="width: 400px; height: 400px">
-        <img src="<%= befakepost.front_picture %>" alt="photo du devant" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-
       <p class="text-white">
         <%= link_to "Show this befakepost", befakepost %>
       </p>
@@ -83,7 +47,5 @@
 
   <%= link_to "New befakepost", new_befakepost_path %>
   </div>
-
-
 </body>
 </html>
