@@ -5,10 +5,10 @@
 
   <body class="container fs-5">
     <div class="d-flex justify-content-between">
-     <%= link_to "Back to befakeposts", befakeposts_path %>
+     <%= link_to image_tag("back_arrow.svg", width:"40px"), befakeposts_path %>
   <p class="text-center fw-bold fs-3 py-4"><%= @befakepost.username %></p>
- 
-  <button type="button" class="center btn btn-primary">Primary</button>
+ <%= link_to image_tag("options_points.svg", width:"40px"), befakeposts_path %>
+      
   </div>
   <p class="date text-center"><%= l(@befakepost.created_at, format: '%H:%M:%S') %></p>
   <div class="text-white">
@@ -17,7 +17,6 @@
 
 
 
-<br><br><br><br><br><br>
 
   <div class="container p-0">
 
