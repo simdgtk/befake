@@ -25,7 +25,7 @@ class BefakepostsController < ApplicationController
 
     respond_to do |format|
       if @befakepost.save
-        format.html { redirect_to befakepost_url(@befakepost), notice: "Befakepost was successfully created." }
+        format.html { redirect_to befakepost_url(@befakepost), notice: "Ton post à bien été créé !" }
         format.json { render :show, status: :created, location: @befakepost }
       else
         format.html { render :new, status: :unprocessable_entity }

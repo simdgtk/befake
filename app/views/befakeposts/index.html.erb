@@ -1,5 +1,5 @@
 <div class="container fs-5">
-<p class="text-center fw-bold fs-3 py-4">BeFake.</p>
+<p class="text-center fw-bold fs-3 py-4" id="befake">BeFake.</p>
 <div class="text-white">
   <p style="color: green"><%= notice %></p>
 <div class="container p-0">
@@ -27,10 +27,6 @@
 
 </div>
 </div>
-<script>
-  const test = document.querySelector('.test');
-  test.style.background-repeat = 'no-repeat';
-</script>
 
 
 <div class="new-befakepost w-100 d-flex justify-content-center align-items-center">
@@ -49,16 +45,3 @@
 </div>
 </a>
 </div>
-<script>
-  window.addEventListener('load', () => {
-    const notification = document.querySelector('.notification');
-    const newBefakepost = document.querySelector('.new-befakepost');
-    setTimeout(() => {
-      notification.style.transform = 'scale(1)';
-      notification.style.top = "-30px";
-    }, 5000);
-  });
-  notification.onclick = () => {
-    newBefakepost.style.display = 'none';
-  }
-</script>

@@ -10,38 +10,46 @@
       </ul>
     </div>
   <% end %>
+  <div class="form">
+<div class="imputs">
+  <div class="d-flex w-100 justify-content-between" id="input-container">
+    <div class="d-flex flex-column input-column">
+      <div class="input">
+        <%= form.label :username, "Nom d’utilisateur :", style: "display: block" %>
+        <%= form.text_field :username %>
+      </div>
+      <div class="input">
+        <%= form.label :description, "Description du post :",style: "display: block" %>
+        <%= form.text_area :description %>
+      </div>
+      <div class="input">
+        <%= form.label :location, "Lieu du post :", style: "display: block" %>
+        <%= form.text_field :location %>
+      </div>
+    </div>
 
-  <div>
-    <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username %>
+    <div class="d-flex flex-column input-column">
+      <div class="input">
+        <%= form.label :profile_picture, "URL de la photo de profil :", style: "display: block" %>
+        <%= form.text_area :profile_picture %>
+      </div>
+      <div class="input">
+        <%= form.label :back_picture, "URL de la photo arrière :", style: "display: block" %>
+        <%= form.text_area :back_picture %>
+      </div>
+      <div class="input">
+        <%= form.label :front_picture, "URL de la photo avant :", style: "display: block" %>
+        <%= form.text_area :front_picture %>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :profile_picture, style: "display: block" %>
-    <%= form.text_area :profile_picture %>
   </div>
 
-  <div>
-    <%= form.label :front_picture, style: "display: block" %>
-    <%= form.text_area :front_picture %>
+  <div class="d-flex gap-3 submit_input">
+    <%= form.submit class: "form-submit", value:"AJOUTER" %>
+    <%= image_tag("submit_arrow.svg", width: "30px") %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :back_picture, style: "display: block" %>
-    <%= form.text_area :back_picture %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>
