@@ -20,7 +20,7 @@
 
 <div class="container show-container mx-auto p-0">
   <div class="row flex-md-row flex-column">
-    <div class="col-md-6 col-12 card-container">
+    <div class="col-lg-4 col-md-12 col-12 card-container">
       <div id="big-card" class="card text-decoration-none test card-show" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover; background: no-repeat url('<%= @befakepost.back_picture %>')">
         <div class="card-body">
           <div class="d-flex flex-column justify-content-between h-100">
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6 texts">
+    <div class="col-lg-8 col-12 texts">
       <p class="text-center description"><%= @befakepost.description %></p>
       <div class="location">
         <%= image_tag("location.svg", height: "24px", style: "padding-top: 9px") %>
@@ -42,21 +42,20 @@
 
 </div>
 <script>
-const bigCard = document.getElementById('big-card');
-const smallCard = document.getElementById('small-card');
-let imageBigCard = bigCard.style.backgroundImage;
-let imageSmallCard = smallCard.style.backgroundImage;
+window.onload = function() {
+  let bigCard = document.getElementById('big-card');
+  let smallCard = document.getElementById('small-card');
+  let imageBigCard = bigCard.style.backgroundImage;
+  let imageSmallCard = smallCard.style.backgroundImage;
 
-smallCard.addEventListener('click', () => {
-  if (bigCard.style.backgroundImage === imageBigCard) {
-    bigCard.style.backgroundImage = imageSmallCard;
-    smallCard.style.backgroundImage = imageBigCard;
-  } else if (bigCard.style.backgroundImage === imageSmallCard) {
-    bigCard.style.backgroundImage = imageBigCard;
-    smallCard.style.backgroundImage = imageSmallCard;
-  }
-});
-
-
-
+  smallCard.addEventListener('click', () => {
+    if (bigCard.style.backgroundImage === imageBigCard) {
+      bigCard.style.backgroundImage = imageSmallCard;
+      smallCard.style.backgroundImage = imageBigCard;
+    } else if (bigCard.style.backgroundImage === imageSmallCard) {
+      bigCard.style.backgroundImage = imageBigCard;
+      smallCard.style.backgroundImage = imageSmallCard;
+    }
+  });
+};
 </script>
