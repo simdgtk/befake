@@ -1,6 +1,8 @@
 # README
 
 Alternative à BeReal, BeFake met en scène des images improbables.
+accédez y ici :
+https://befake.osc-fr1.scalingo.io/
 
 
 Infos techniques :
