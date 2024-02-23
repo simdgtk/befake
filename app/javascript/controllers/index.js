@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       notification.style.transform = 'scale(1)';
       notification.style.top = "-30px";
-    }, 3000);
+    }, 2000);
   });
   notification.onclick = () => {
     newBefakepost.style.display = 'none';

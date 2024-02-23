@@ -24,13 +24,13 @@
 <div class="container show-container mx-auto p-0">
   <div class="row flex-md-row flex-column">
     <div class="col-md-6 col-12 card-container">
-      <a class="card text-decoration-none test card-show" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover; background: no-repeat url('<%= @befakepost.back_picture %>')">
+      <div id="big-card" class="card text-decoration-none test card-show" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover; background: no-repeat url('<%= @befakepost.back_picture %>')">
         <div class="card-body">
           <div class="d-flex flex-column justify-content-between h-100">
-            <div class="sm-card" style="background-image: url('<%= @befakepost.front_picture %>')"></div>
+            <div id="small-card" class="sm-card cur" style="background-image: url('<%= @befakepost.front_picture %>')"></div>
           </div>
         </div>
-      </a>
+      </div>
     </div>
     <div class="col-6 texts">
       <p class="text-center description"><%= @befakepost.description %></p>
@@ -44,3 +44,22 @@
 
 
 </div>
+<script>
+const bigCard = document.getElementById('big-card');
+const smallCard = document.getElementById('small-card');
+let imageBigCard = bigCard.style.backgroundImage;
+let imageSmallCard = smallCard.style.backgroundImage;
+
+smallCard.addEventListener('click', () => {
+  if (bigCard.style.backgroundImage === imageBigCard) {
+    bigCard.style.backgroundImage = imageSmallCard;
+    smallCard.style.backgroundImage = imageBigCard;
+  } else if (bigCard.style.backgroundImage === imageSmallCard) {
+    bigCard.style.backgroundImage = imageBigCard;
+    smallCard.style.backgroundImage = imageSmallCard;
+  }
+});
+
+
+
+</script>
