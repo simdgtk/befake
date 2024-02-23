@@ -9,3 +9,15 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+
+window.addEventListener('load', () => {
+    const notification = document.querySelector('.notification');
+    const newBefakepost = document.querySelector('.new-befakepost');
+    setTimeout(() => {
+      notification.style.transform = 'scale(1)';
+      notification.style.top = "-30px";
+    }, 3000);
+  });
+  notification.onclick = () => {
+    newBefakepost.style.display = 'none';
+}
