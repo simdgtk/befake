@@ -1,12 +1,19 @@
 
 <div class="container fs-5">
-  <div class="d-flex justify-content-between align-items-center">
-    <%= link_to image_tag("arrow_down.svg", width: "30px"), befakeposts_path  %>
-<p class="fw-bold fs-3 py-4" id="befake">BeFake.</p>
-<div></div>
+    <div class="d-flex justify-content-between align-items-baseline">
+      <%= link_to image_tag("arrow_left.svg", width:"40px", title:"Retour à l'accueil"), befakeposts_path %>
+      <div class="d-flex flex-column">
+          <p class="fw-bold fs-3 py-4">BeFake.</p>
+      </div>
+      <div>
+              <%= link_to image_tag("bin.svg", width:"40px", title:"Supprimer le BeFake"), @befakepost, method: :delete %>
+
+      </div>
+           <!--<%= link_to "Éditer le post", edit_befakepost_path(@befakepost), class: "text-white text-decoration-none fw-bold py-4" %> -->
 
   </div>
-</div>
+
+
 
 <div class="container d-flex flex-column justify-content-between">
 
@@ -16,8 +23,6 @@
 
   <br>
 
-  <div>
-    <%= link_to "Back to befakeposts", befakeposts_path %>
-  </div>
+
 </div>
 
