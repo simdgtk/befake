@@ -1,10 +1,23 @@
-<h1>Editing befakepost</h1>
-<%= render "form", befakepost: @befakepost %>
 
+<div class="container fs-5">
+  <div class="d-flex justify-content-between align-items-center">
+    <%= link_to image_tag("arrow_down.svg", width: "30px"), befakeposts_path  %>
+<p class="fw-bold fs-3 py-4" id="befake">BeFake.</p>
+<div></div>
 
-
-<br>
-
-<div>
-  <%= link_to "Back to befakeposts", befakeposts_path %>
+  </div>
 </div>
+
+<div class="container d-flex flex-column justify-content-between">
+
+
+  <%= render "form", befakepost: @befakepost %>
+</div>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to befakeposts", befakeposts_path %>
+  </div>
+</div>
+
