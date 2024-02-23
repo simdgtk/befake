@@ -44,7 +44,13 @@
   </div>
 
   <div class="d-flex gap-3 submit_input">
-    <%= form.submit class: "form-submit", value:"AJOUTER" %>
+      <%= form.submit class: "form-submit", value: "#{
+        if params[:action] == 'edit'
+          'Modifier'
+        else
+          'Ajouter'
+        end
+      }" %>
     <%= image_tag("submit_arrow.svg", width: "30px") %>
   </div>
   </div>
