@@ -6,7 +6,7 @@
           <p class="fw-bold fs-3 py-4">BeFake.</p>
       </div>
       <div>
-              <%= link_to image_tag("bin.svg", width:"40px", title:"Supprimer le BeFake"), @befakepost, method: :delete %>
+        <%= button_to image_tag("bin.svg", width:"40px"), @befakepost, method: :delete, class:"destroy", style: 'background:none; border:none' %>
 
       </div>
            <!--<%= link_to "Éditer le post", edit_befakepost_path(@befakepost), class: "text-white text-decoration-none fw-bold py-4" %> -->
@@ -25,4 +25,3 @@
 
 
 </div>
-
