@@ -1,6 +1,6 @@
 <img class="background-image" src="<%= @befakepost.back_picture %>" alt="">
 <div class="container fs-5">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-baseline">
       <%= link_to image_tag("arrow_left.svg", width:"40px"), befakeposts_path %>
       <div class="d-flex flex-column">
           <p class="fw-bold fs-3 py-4"><%= @befakepost.username %></p>
@@ -16,7 +16,7 @@
 
 <div class="container show-container">
   <div class="col-6">
-    <a class="card text-decoration-none test" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover;
+    <a class="card text-decoration-none test card-show" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover;
     background: no-repeat url('<%= @befakepost.back_picture %>')
     ">
       <div class="card-body">
