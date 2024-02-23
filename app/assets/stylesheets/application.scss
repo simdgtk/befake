@@ -103,8 +103,9 @@ form{
   flex-direction: column;
   justify-content: space-between;
 }
-.input-container{
+#input-container{
   margin-bottom: 80px;
+  gap: 80px;
 }
 .input-column{
   gap: 80px;
