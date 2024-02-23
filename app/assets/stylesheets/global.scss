@@ -1,0 +1,48 @@
+#befake{
+  user-select: none;
+}
+
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.card{
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  aspect-ratio: 256 / 345;
+  width: auto;
+  border-radius: 12px;
+  border: none;
+}
+.card:hover{
+  transform: scale(1.05);
+}
+.card-body{
+  padding: 7%;
+
+}
+.username{
+  margin-bottom: -7px;
+}
+.date{
+  color: #AAAAAA;
+}
+
+.sm-card{
+  transition: filter 1s ease-in-out;
+  cursor: pointer;
+  aspect-ratio: 256 / 345;
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-size: cover;
+}
+.sm-card:hover{
+  filter: brightness(1.2);
+}
+.card{
+  background-size: cover!important;
+}

@@ -30,7 +30,8 @@
 
 
 <div class="new-befakepost w-100 d-flex justify-content-center align-items-center">
-<%= link_to image_tag("photo.svg"), new_befakepost_path %>
+<%= link_to image_tag("photo.svg"), new_befakepost_path, class: "take-photo"%>
+<div class="take-photo-circle"></div>
 <a href="<%= new_befakepost_path %>" class="notification text-white text-decoration-none">
 <div class="d-flex" style="gap:10px">
 <%= image_tag("logo.svg", width: "30px") %>

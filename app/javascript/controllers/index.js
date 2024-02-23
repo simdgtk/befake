@@ -17,7 +17,19 @@ window.addEventListener('load', () => {
       notification.style.transform = 'scale(1)';
       notification.style.top = "-30px";
     }, 2000);
+    //animation bouton photo
+    const takePhoto = document.querySelector(".take-photo");
+    const takePhotoCircle = document.querySelector(".take-photo-circle");
+    takePhoto.addEventListener("mouseover", ()=>{
+      if (takePhotoCircle.style.height === "0px") {
+        takePhotoCircle.style.height = "50px";
+        takePhotoCircle.style.width = "50px";
+      } else {
+        takePhotoCircle.style.height = "0px";
+        takePhotoCircle.style.width = "0px";
+      }
+    });
+    notification.onclick = () => {
+        newBefakepost.style.display = 'none';
+    }
   });
-  notification.onclick = () => {
-    newBefakepost.style.display = 'none';
-}
