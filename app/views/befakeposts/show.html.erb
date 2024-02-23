@@ -2,8 +2,8 @@
 <div class="container fs-5">
     <div class="d-flex justify-content-between align-items-baseline">
       <%= link_to image_tag("arrow_left.svg", width:"40px", title:"Retour à l'accueil"), root_path %>
-      <div class="d-flex flex-column">
-          <p class="fw-bold fs-3 py-4"><%= @befakepost.username %></p>
+      <div class="d-flex flex-column align-items-center">
+          <p class="fw-bold fs-3 py-4 pb-0 mb-1"><%= @befakepost.username %></p>
           <p class="date text-center"><%= l(@befakepost.created_at, format: '%H:%M:%S') %></p>
       </div>
       <div>
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="col-lg-8 col-12 texts">
-      <p class="text-center description"><%= @befakepost.description %></p>
+      <p class="text-center description m-5"><%= @befakepost.description %></p>
       <div class="location">
         <%= image_tag("location.svg", height: "24px", style: "padding-top: 9px") %>
         <p class="fw-bold m-0"><%= @befakepost.location %></p>
