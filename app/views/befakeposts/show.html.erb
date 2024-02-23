@@ -6,7 +6,14 @@
           <p class="fw-bold fs-3 py-4"><%= @befakepost.username %></p>
           <p class="date text-center"><%= l(@befakepost.created_at, format: '%H:%M:%S') %></p>
       </div>
-            <%= link_to "Éditer le post", edit_befakepost_path(@befakepost), class: "text-white text-decoration-none fw-bold py-4" %>
+      <div>
+        <select name="options" id="options">
+          <option value="">Options</option>
+          <option value="edit">Éditer le post</option>
+          <option value="delete">Supprimer le post</option>
+        </select>
+      </div>
+           <!--<%= link_to "Éditer le post", edit_befakepost_path(@befakepost), class: "text-white text-decoration-none fw-bold py-4" %> -->
 
   </div>
 
@@ -14,27 +21,26 @@
 
 
 
-<div class="container show-container">
-  <div class="col-6">
-    <a class="card text-decoration-none test card-show" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover;
-    background: no-repeat url('<%= @befakepost.back_picture %>')
-    ">
-      <div class="card-body">
-        <div class="d-flex flex-column justify-content-between h-100">
-          <div class="sm-card" style="background-image: url('<%= @befakepost.front_picture %>')"></div>
+<div class="container show-container mx-auto p-0">
+  <div class="row flex-md-row flex-column">
+    <div class="col-md-6 col-12 card-container">
+      <a class="card text-decoration-none test card-show" href="<%= befakepost_path(@befakepost) %>" style="overflow: hidden; background-position: center; background-size: cover; background: no-repeat url('<%= @befakepost.back_picture %>')">
+        <div class="card-body">
+          <div class="d-flex flex-column justify-content-between h-100">
+            <div class="sm-card" style="background-image: url('<%= @befakepost.front_picture %>')"></div>
+          </div>
         </div>
+      </a>
+    </div>
+    <div class="col-6 texts">
+      <p class="text-center description"><%= @befakepost.description %></p>
+      <div class="location">
+        <%= image_tag("location.svg", height: "24px", style: "padding-top: 9px") %>
+        <p class="fw-bold m-0"><%= @befakepost.location %></p>
       </div>
-    </a>
+    </div>
   </div>
-  <div class="col-6">test</div>
 </div>
 
-
-
-
-<p class="text-center fs-3 py-4"><%= @befakepost.description %></p>
-<button class="btn btn-secondary" ><%= @befakepost.location %></button>
-
-  <%= link_to "Edit this befakepost", edit_befakepost_path(@befakepost) %> |
 
 </div>
