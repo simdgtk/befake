@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Alternative à BeReal, BeFake met en scène des images improbables.
+accédez y ici :
+https://befake.osc-fr1.scalingo.io/
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Infos techniques :
+ruby "3.1.2"
+gem "puma", ">= 5.0"
+Gems utilisées :
+gem "pg", "~> 1.1"
+gem "rails", "~> 7.1.3"
+gem 'autoprefixer-rails', '~> 10.4', '>= 10.4.16.0'
+gem 'popper_js', '~> 2.11', '>= 2.11.8'
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
