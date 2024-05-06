@@ -26,20 +26,50 @@ body{
   opacity: 1;
   background-color: rgb(255, 255, 255);
 }
-.notification{
 
+.notification, .info{
   transition: all 0.5s ease-in-out;
   transform: scale(0);
   padding: 7px;
   top: 100px;
   position: absolute;
   z-index: 999;
-border-radius: 20px;
-border: 2px solid #737373;
-background: linear-gradient(89deg, rgba(112, 124, 137, 0.92) -7.41%, rgba(32, 36, 40, 0.90) 27.04%, rgba(11, 13, 15, 0.89) 45.91%, rgba(26, 29, 33, 0.90) 61.77%, rgba(111, 121, 131, 0.97) 108.94%);
-backdrop-filter: blur(9.75px);
-width: 300px;
-height: 70px;
+  border-radius: 20px;
+  border: 2px solid #737373;
+  background: linear-gradient(89deg, rgba(112, 124, 137, 0.92) -7.41%, rgba(32, 36, 40, 0.90) 27.04%, rgba(11, 13, 15, 0.89) 45.91%, rgba(26, 29, 33, 0.90) 61.77%, rgba(111, 121, 131, 0.97) 108.94%);
+  backdrop-filter: blur(9.75px);
+  width: 330px;
+  height: 70px;
+}
+.info{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  display: block;
+  height: fit-content;
+  transform: scale(1) translateX(-50%);
+  font-size: 12px;
+  padding: 14px;
+}
+.close{
+  z-index: 999;
+  border: none;
+  color: white;
+  background: none;
+  position: absolute;
+  top: 1px;
+  right: 9px;
+  font-size: 15px;
+}
+.info p {
+  margin: 0;
+}
+.info .link, .text-link:visited, .text-link:link, .text-link:active, .text-link:hover{
+  color: white;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  transition: height 0.5s ease-in-out;
 }
 .notification span{
   font-size: 14px;

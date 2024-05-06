@@ -14,7 +14,6 @@ class BefakepostsController < ApplicationController
   def new
     @befakepost = Befakepost.new
   end
-
   # GET /befakeposts/1/edit
   def edit
   end
