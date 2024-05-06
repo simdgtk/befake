@@ -25,14 +25,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_21_093731) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "username"
-    t.text "front_picture"
-    t.text "back_picture"
-    t.text "description"
-    t.string "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end

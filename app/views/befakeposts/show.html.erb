@@ -41,3 +41,21 @@
 
 
 </div>
+<script>
+  window.onload = function() {
+    let bigCard = document.getElementById('big-card');
+    let smallCard = document.getElementById('small-card');
+    let imageBigCard = bigCard.style.backgroundImage;
+    let imageSmallCard = smallCard.style.backgroundImage;
+
+    smallCard.addEventListener('click', () => {
+      if (bigCard.style.backgroundImage === imageBigCard) {
+        bigCard.style.backgroundImage = imageSmallCard;
+        smallCard.style.backgroundImage = imageBigCard;
+      } else if (bigCard.style.backgroundImage === imageSmallCard) {
+        bigCard.style.backgroundImage = imageBigCard;
+        smallCard.style.backgroundImage = imageSmallCard;
+      }
+    });
+  };
+  </script>
