@@ -5,11 +5,17 @@
   <button class="close">x</button>
 </div>
 <script>
+const info = document.querySelector('.info');
+// localStorage.setItem("visible", "true")
+info.style.display = "none";
+if(localStorage.getItem("visible") !== "false"){
+  info.style.display = "block"
+}
 const close = document.querySelector('.close');
 close.addEventListener("click", ()=>
 {
-  const info = document.querySelector('.info');
   info.style.display = 'none';
+  localStorage.setItem("visible", "false");
 });
 function appendText() {
   const text = document.querySelector('.text');
