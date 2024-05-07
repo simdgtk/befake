@@ -5,6 +5,9 @@ class BefakepostsController < ApplicationController
   def index
     @befakeposts = Befakepost.all
   end
+  # manifeste
+  def manifest
+  end
 
   # GET /befakeposts/1 or /befakeposts/1.json
   def show

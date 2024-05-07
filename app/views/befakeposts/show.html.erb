@@ -1,4 +1,4 @@
-<img class="background-image" src="<%= @befakepost.back_picture %>" alt="">
+<img class="background-image" src="<%= @befakepost.back_picture %>">
 <div class="container fs-5">
     <div class="d-flex justify-content-between align-items-baseline">
       <%= link_to image_tag("arrow_left.svg", width:"40px", title:"Retour à l'accueil"), root_path %>
@@ -8,15 +8,11 @@
       </div>
       <div>
          <%= link_to image_tag("pen.svg", width:"40px", title:"Modifier le BeFake"), edit_befakepost_path(@befakepost) %>
-
       </div>
-           <!--<%= link_to "Éditer le post", edit_befakepost_path(@befakepost), class: "text-white text-decoration-none fw-bold py-4" %> -->
 
   </div>
 
     <p style="color: white"><%= notice %></p>
-
-
 
 <div class="container show-container mx-auto p-0">
   <div class="row flex-md-row flex-column">
@@ -42,6 +38,7 @@
 
 </div>
 <script>
+// fonctionnalité de changement de carte au clic
   window.onload = function() {
     let bigCard = document.getElementById('big-card');
     let smallCard = document.getElementById('small-card');

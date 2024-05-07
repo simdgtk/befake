@@ -1,5 +1,6 @@
 body{
   min-height: 100vh;
+  font-size: 12px;
 }
 
 .new-befakepost{
@@ -11,6 +12,9 @@ body{
 }
 .take-photo{
   position: relative;
+}
+.text a{
+  color: white;
 }
 
 .take-photo-circle{
@@ -45,7 +49,6 @@ body{
   position: absolute;
   top: 100px;
   left: 50%;
-  display: block;
   height: fit-content;
   transform: scale(1) translateX(-50%);
   font-size: 12px;
