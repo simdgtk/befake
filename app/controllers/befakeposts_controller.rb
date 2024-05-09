@@ -5,9 +5,6 @@ class BefakepostsController < ApplicationController
   def index
     @befakeposts = Befakepost.all
   end
-  # manifeste
-  def manifest
-  end
 
   # GET /befakeposts/1 or /befakeposts/1.json
   def show
@@ -40,7 +37,7 @@ class BefakepostsController < ApplicationController
   def update
     respond_to do |format|
       if @befakepost.update(befakepost_params)
-        format.html { redirect_to befakepost_url(@befakepost), notice: "Le post à bien été mis à jour." }
+        format.html { redirect_to befakepost_url(@befakepost), notice: "Le post a bien été mis à jour." }
         format.json { render :show, status: :ok, location: @befakepost }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +51,7 @@ class BefakepostsController < ApplicationController
     @befakepost.destroy!
 
     respond_to do |format|
-      format.html { redirect_to befakeposts_url, notice: "Le post à bien été supprimé." }
+      format.html { redirect_to befakeposts_url, notice: "Le post a bien été supprimé." }
       format.json { head :no_content }
     end
   end

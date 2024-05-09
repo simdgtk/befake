@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'manifest/index'
+  get 'demarche/index'
   resources :befakeposts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "befakeposts#index"
-  # manifest path
-  get '/manifest', to: 'manifest#index'
+  # "explication de notre démarche" path
+  get '/demarche', to: 'demarche#index'
 end
