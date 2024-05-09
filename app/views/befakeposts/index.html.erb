@@ -4,25 +4,25 @@
   </div>
   <button class="close">x</button>
 </div>
+<div id="wall"></div>
 <script>
+const wall = document.getElementById('wall');
 const info = document.querySelector('.info');
 // localStorage.setItem("visible", "true")
 info.style.display = "none";
+wall.style.display = "none";
 if(localStorage.getItem("visible") !== "false"){
   info.style.display = "block"
+  wall.style.display = "block"
 }
 const close = document.querySelector('.close');
 close.addEventListener("click", ()=>
 {
   info.style.display = 'none';
+  wall .style.display = 'none';
   localStorage.setItem("visible", "false");
 });
-function appendText() {
-  const text = document.querySelector('.text');
-  text.innerHTML = `<p>Befake est un projet étudiant collaboratif et ouvert, veuillez ne pas supprimer ou modifier les posts des autres de manière abusive svp. N'hésitez pas à créer votre post.</p>
-  <p>Les images sont en grande partie générées par l'IA <a href="https://www.midjourney.com" class="text-link">Midjourney</a> et nous nous nous sommes inspirés de BeReal, le réseau social le plus "authentique".
-</p>`
-}
+
 </script>
 <div class="container fs-5">
 <p class="text-center fw-bold fs-3 py-4" id="befake">BeFake.</p>
