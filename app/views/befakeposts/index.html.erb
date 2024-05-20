@@ -44,7 +44,7 @@ close.addEventListener("click", ()=>
           <div class="sm-card" style="background-image: url('<%= befakepost.front_picture %>')"></div>
           <div class="texts d-flex g-2 flex-column">
             <span class="fw-bold text-white username"><%= befakepost.username %></span>
-            <span class="date fw-bold"><%= (befakepost.created_at + 1.hour).strftime("%H:%M:%S") %></span>
+            <span class="date fw-bold"><%= (befakepost.created_at + 2.hour).strftime("%H:%M:%S") %></span>
           </div>
         </div>
       </div>
