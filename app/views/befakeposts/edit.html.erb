@@ -5,10 +5,17 @@
       <div class="d-flex flex-column">
           <p class="fw-bold fs-3 py-4">BeFake.</p>
       </div>
-      <div>
+            <% 
+            limit = Time.new(2024, 5, 16, 14, 35, 0)
+            if @befakepost.created_at > limit %>
+              <div>
         <%= button_to image_tag("bin.svg", width:"40px"), @befakepost, method: :delete, class:"destroy", style: 'background:none; border:none' %>
 
       </div>
+      <% else %>
+      <p></p>
+      <% end %>
+      
            <!--<%= link_to "Éditer le post", edit_befakepost_path(@befakepost), class: "text-white text-decoration-none fw-bold py-4" %> -->
 
   </div>

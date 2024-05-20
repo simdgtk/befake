@@ -1,6 +1,6 @@
 <div class="info">
   <div class="text">
-  <p>Befake est un projet étudiant collaboratif et ouvert, veuillez ne pas supprimer ou modifier les posts des autres de manière abusive svp. N'hésitez pas à créer votre post. <%= link_to "En savoir plus", demarche_path %></p>
+  <p>Befake est un projet étudiant collaboratif, veuillez ne pas supprimer ou modifier les posts des autres de manière abusive svp. N'hésitez pas à créer votre post. <%= link_to "En savoir plus", demarche_path %></p>
   </div>
   <button class="close">ok</button>
 </div>
@@ -61,6 +61,16 @@ close.addEventListener("click", ()=>
 <div class="new-befakepost w-100 d-flex justify-content-center align-items-center">
 <%= link_to image_tag("photo.svg", alt: ""), new_befakepost_path, class: "take-photo"%>
 <div class="take-photo-circle"></div>
+<%
+=begin%>
+ <a href="<%= new_befakepost_path %>" class="notification text-white text-decoration-none"> 
+<%
+=end%>
+<%
+=begin%>
+  hrefs enlevées, remplacer root_path par new_befakepost_path et <%= new_befakepost_path %>
+<%
+=end%>
 <a href="<%= new_befakepost_path %>" class="notification text-white text-decoration-none">
 <div class="d-flex" style="gap:10px">
 <%= image_tag("logo.svg", width: "30px", alt: "") %>
